@@ -34,12 +34,14 @@ with sync_playwright() as p:
                     book_actual_price = single_book.query_selector(f"{fn}").inner_text().replace("\n", " ")
                     break
                 except Exception as e:
+                    print(e)
                     pass
                 
             try:
                 book_first_price = single_book.query_selector("del").inner_text()
 
-            except:
+            except Exception as e:
+                print(e)
                 book_first_price = "null"
                 
             book_format_list_raw = single_book.query_selector_all("ul > li") #[class*='book-type']
@@ -51,6 +53,7 @@ with sync_playwright() as p:
                     single_finds = re.findall(r"(?=(\b" + '\\b|\\b'.join(words) + r"\b))", i)
                     finds.append(single_finds[0].split("-")[-1])
                 except Exception as e:
+                    print(e)
                     pass
 
             book_format = ' '.join(set(finds))
@@ -64,7 +67,7 @@ with sync_playwright() as p:
                 "book_actual_price": str(book_actual_price),
                 "book_first_price": str(book_first_price),
                 "book_url_link": book_url}
-            
+            print(data_row)
             data_record.append(data_row)
         print(no_page)
     df = pd.DataFrame(data_record)
