@@ -10,7 +10,11 @@ The main task is to collect some information about a `python` search result like
 * book first price
 * bookurl link
 
-All results are saved to a CSV file.
+All results are saved to a CSV file with timestamp.
+
+### HOW TO RUN ?
+
+Navigate to script location and in terminal type `python helion_script.py`
 
 
 Python 3.9
