@@ -1,4 +1,4 @@
-# playwright_internet_bookstore
+# playwright_online_bookstore
 Example webpage scraper written in python using playwright.
 
 The main task is to collect some information about a `python` search result like:
