@@ -20,4 +20,5 @@ All results will be saved to a CSV file with a timestamp in same directory.
 Python 3.9
 
 playwright 1.22.0
+
 pandas 1.4.2
