@@ -8,14 +8,14 @@ The main task is to collect some information about a `python` search result like
 * book format e.g. book / ebook / online (course)
 * book actual price
 * book first price
-* bookurl link
+* book url
 
-All results are saved to a CSV file with timestamp.
 
 ### HOW TO RUN ?
 
-Navigate to script location and in terminal type `python helion_script.py`
+Navigate to script location using terminal and type `python helion_script.py`
 
+All results will be saved to a CSV file with a timestamp in same directory.
 
 Python 3.9
 
